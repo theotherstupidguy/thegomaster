@@ -1,0 +1,46 @@
+<br>
+<!--
+<div class="areawhite">
+  <div class="login">
+-->
+
+
+<!-- Table goes in the document BODY -->
+<table class="gradienttable">
+  <tr>
+    <th><p>Game(Total: <%=@studies.count %>)</p></th><th><p> Remaining Time</p></th><th><p> Viewed</p></th><th><p> Completed</p></th>
+
+  </tr>
+
+  <% @studies.each do |g| %>
+    <tr style="cursor: pointer;" onclick="location.href='/studies/<%= g.title %>';">
+    <td>
+    <%= g.title %>
+    </td>
+    <td>
+    <p>
+    <span style="color:red"> <%= g.time / 60 %> mins</span>
+    <br>
+    <img width='40px' src='../assets/images/clock.png'/>
+    </p>
+    <p>
+    remaining for completion
+    </p>
+    </td>
+    <td>
+    <p>
+    <%= g.viewed %>
+    </p>
+    </td>
+    <td>
+    <p>
+    <%= g.completed%>
+    </p>
+    </td>
+    </tr>
+  <% end %>
+  </table>
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+</style>
+

@@ -1,0 +1,30 @@
+development:
+  sessions:
+    default:
+      database: thegomaster 
+      hosts:
+        - localhost:27017
+#      options:
+#        consistency: strong
+
+
+#test:
+#  sessions:
+#    default:
+#      database: sample_app_test
+#      hosts:
+#        - localhost:27017
+#      options:
+#        consistency: strong
+#
+#production:
+#  sessions:
+#    default:
+#      uri: <%= ENV['MONGOHQ_URL'] %>
+#    username: <%= ENV['MONGOHQ_USERNAME'] %>
+#    password: <%= ENV['MONGOHQ_PASSWORD'] %>
+#    database: sample_app_production
+#    options:
+#      skip_version_check: true
+#      safe: true
+#      consistency: strong

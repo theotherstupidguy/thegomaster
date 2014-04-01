@@ -1,0 +1,33 @@
+
+<div class="areablack">
+  Game: <%= @game.title %>
+</div>
+<br>
+<div class="areablack effect7">
+
+
+  <div id="player-container-<%=@game.title%>"></div>
+</div>
+  <script type="text/javascript">
+    var player1 = new eidogo.Player({
+container:       "player-container-<%=@game.title%>", // HTML element id indicating where to put the player
+//theme:           "compact", // "standard" or "compact"
+theme:           "standard", // "standard" or "compact"
+//sgfUrl:          "games/<%=@game.title%>.sgf" , // relative URL (within same domain) to SGF file to load 
+//sgfUrl:          "assets/sgf/shusaku/<%=@game.title%>.sgf" , // relative URL (within same domain) to SGF file to load 
+sgfUrl:          "/assets/sgf/<%=@game.title%>.sgf", // relative URL (within same domain) to SGF file to load 
+loadPath:        [0, 0], // The location within the game tree to start at
+mode:            "play", // "play" or "view"
+showComments:    true,
+showPlayerInfo:  true,
+showGameInfo:    true,
+showTools:       false,
+showOptions:     true,
+showNavTree:     true,
+markCurrent:     true,
+markVariations:  true,
+markNext:        true,
+enableShortcuts: true,
+problemMode:     false
+});
+</script>

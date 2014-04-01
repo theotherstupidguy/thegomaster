@@ -1,0 +1,57 @@
+<div class="overlay"></div>
+
+<div id="addtip" class="modal">
+  <div class="" style="color: black">
+    <form class="contact_form" id="addtipform" action="/addtip" method="post">
+<br>
+      Feel free to share a 'Go term', 'haiku', 'Quote'!
+      <p>Big font:     </p> 
+      <input type="text" name="title" />
+      <p>small font:   </p>
+      <input type="text" name="desc" />
+      <br>
+      <br>
+      <br>
+      <input class='' type="submit" value="Add" />
+    </form>
+
+    <div id='msg'>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $('#addtipform').on('submit',function(event) {
+    // get the form data
+    // there are many ways to get this data using jQuery (you can use the class or id also)
+    var formData = {
+      'title' 				: $('input[name=title]').val(),
+      'desc' 			: $('input[name=desc]').val()
+    };
+
+    event.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "/addtip",
+      data: formData,
+      success:function(){
+	//$('addtipform').find("input[type=text, name='title'], textarea").val("")
+	//$('addtipform').find("input type='text' name='title'").val("")
+	$('#addtipform').each (function(){
+	    this.reset();
+	  });
+	// successful request; do something with the data
+	$('#msg').html("<h3 class='thanks' style='color: #FCC9B9;'>Thanks for sharing !!</h3>")
+	$('.thanks').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1)
+	//$('#addtip').empty();
+      },
+      error:function(){
+	// failed request; give feedback to user
+	$('#addtip').html('<p class="error"><strong>Oops!</strong> Try that again in a few moments.</p>');
+      }
+    });
+    });
+</script>

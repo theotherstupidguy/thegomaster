@@ -1,0 +1,46 @@
+<div class="overlay"></div>
+
+<div id="addgame" class="modal">
+  <div class="" style="color: black">
+
+    <form class="contact_form" id="addgameform" action="/uploads/game" method="post"  enctype='multipart/form-data'>   
+      <input type="file" name="myfile" id="uploaded_data" >
+      <p><input type="submit" value="Continue"></p>
+    </form>
+    <div id='msg'>
+
+    </div>
+  </div>
+</div>
+<!--
+<script>
+
+  $('#addgameform').on('submit',function(event) {
+    // get the form data
+    // there are many ways to get this data using jQuery (you can use the class or id also)
+    var formData = {
+      'myfile' 				: $('input[name=myfile]').val(),
+    };
+
+    event.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "/uploads/game",
+      data: formData,
+      success:function(){
+	$('#addgameform').each (function(){
+	    this.reset();
+	  });
+	// successful request; do something with the data
+	$('#msg').html("<h3 class='thanks' style='color: #FCC9B9;'>Thanks for sharing !!</h3>")
+	$('.thanks').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1)
+      },
+      error:function(){
+	// failed request; give feedback to user
+	$('#addgame').html('<p class="error"><strong>Oops!</strong> Try that again in a few moments.</p>');
+      }
+    });
+    });
+</script>
+-->

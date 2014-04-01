@@ -1,0 +1,67 @@
+<br>
+
+<table class="gradienttable">
+  <tr>
+    <th><p>Username</p></th><th><p> Email</p></th><th><p>... </p></th><th><p>...</p></th>
+
+  </tr>
+
+  <% @users.each do |u| %>
+    <tr style="cursor: pointer;" onclick="location.href='/users/<%= u.username%>';">
+    <td>
+    <%= u.username%>
+    </td>
+    <td>
+
+    <td>
+    <p>
+    <%= u.email%>
+    </p>
+    </td>
+
+  <td>
+    <p>
+    <%= u.email%>
+    </p>
+    </td>
+
+    </tr>
+  <% end %>
+  </table>
+
+
+
+<!--
+ </div>
+</div>
+
+
+    <ul>
+      < @games.each do |g| %>
+	<li>
+
+	<a href="/games/<= g.title %>"> <= g.title %> </a>
+	</li>
+      < end %>
+    </ul>
+    -->
+ <!-- This goes in the document HEAD so IE7 and IE8 don't cry -->
+	<!--[if lt IE 9]>
+	<style type="text/css">
+		table.gradienttable th {
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5e3e4', endColorstr='#b3c8cc',GradientType=0 );
+			position: relative;
+			z-index: -1;
+		}
+		table.gradienttable td {
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebecda', endColorstr='#ceceb7',GradientType=0 );
+			position: relative;
+			z-index: -1;
+		}
+	</style>
+	<![endif]-->
+
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+</style>
+

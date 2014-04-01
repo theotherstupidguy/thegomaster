@@ -1,0 +1,6 @@
+#erb: 
+#:layout => :"../../../ui/layouts/layout"
+#gol: "../../../ui/layouts/layout"
+#gol: "layouts/layout"
+
+ui: "ui/"

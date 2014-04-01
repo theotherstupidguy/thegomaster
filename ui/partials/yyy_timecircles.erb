@@ -1,0 +1,87 @@
+<style>
+</style>
+
+  <div class="example" data-timer="<%=@game.time%>"></div>
+
+<div class="areawhite">
+  <div id="time" class ="" style="cursor: pointer;">Study Timer 
+    <div id="time_status" class="areawhite" style="cursor: pointer !important; color: green;"> 
+   On </div>
+  </div>
+</div>
+
+<script>
+
+  $(document).ready(function(){
+    timestatus = false;
+
+    $('#time').click(function(){
+      if (timestatus) {
+
+	$(".example").TimeCircles().start();
+
+	$('#time_status').html('<div style="color: green;">On </div>');
+
+	$('#time_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+	timestatus = false;
+
+	$(".example").TimeCircles({circle_bg_color: "green"}).rebuild(); 
+	$(".time_circles").css("color","green");
+      } 
+      else {
+	$(".example").TimeCircles({circle_bg_color: "red"}).rebuild(); 
+	$(".time_circles").css("color","red");
+
+	var time = {
+	  'remaining' : $(".example").TimeCircles().getTime(),
+	};
+
+	$.ajax({
+	  type: "POST",
+	  url: "/games/<%= @game.title %>/time",
+	  data: time,
+	});
+
+
+	$(".example").TimeCircles().stop();
+	$('#time_status').html('<div style="color: red;">Off</div>');
+
+	$('#time_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+	timestatus = true;
+
+      }
+    });
+  });
+
+
+$(".example").TimeCircles({
+    "animation": "smooth",
+    "bg_width": 0.9,
+    //"bg_width": 0.2,
+    "fg_width": 0.03,
+    "circle_bg_color": "green",
+    //"circle_bg_color": "#90989F",
+    "time": {
+        "Days": {
+            "text": "Days",
+            "color": "#40484F",
+            "show": true
+        },
+        "Hours": {
+            "text": "Hours",
+            "color": "#40484F",
+            "show": true
+        },
+        "Minutes": {
+            "text": "Minutes",
+            "color": "#40484F",
+            "show": true
+        },
+        "Seconds": {
+            "text": "Seconds",
+            "color": "#40484F",
+            "show": true
+        }
+    }
+});
+</script>

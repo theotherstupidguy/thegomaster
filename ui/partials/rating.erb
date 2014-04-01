@@ -1,0 +1,42 @@
+<!--
+Rating
+<input class="infinite" data-width="50" data-thickness="0.6" data-fgColor="black" data-skin="tron"  data-displayInput="false" data-cursor=true>
+rate this comment
+<div class="idir" style="position: absolute; width:10px;text-align:center;font-size:50px;color:yellow"></div>
+
+<div class="ival" style="width:30px;text-align:center;font-size:50px;color:black">0</div>
+
+<script>
+  $(".dial").knob({
+  'release' : function (v) { /*save value to database something*/ }
+  });
+</script>
+
+<script>
+  $('.dial')
+  .val(27)
+  .trigger('change');
+</script>
+
+<script>
+  $('.dial')
+  .trigger(
+  'configure',
+  {
+  "min":10,
+  "max":40,
+  "fgColor":"#FF0000",
+  "skin":"tron",
+  "cursor":true
+  }
+  );
+</script>
+
+<input class="knob" data-min="-100" data-max="100" data-width="200" data-height="200" data-thickness=".3" data-cursor=true>
+
+
+<input class="infinite" style="display: block;" data-thickness=".6" data-displayInput="false" data-cursor=true>
+
+<div class="ival" style="width:30px; font-size:50px;color:black">0</div>
+</input>
+-->

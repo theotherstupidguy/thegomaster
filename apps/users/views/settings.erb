@@ -1,0 +1,36 @@
+<title>Settings::TheGoMaster- Mastery via Tips</title>
+<br>
+<table class="gradienttable">
+  <tr>
+    <th>
+      <p>
+
+      Username: <%= @user.username %>
+      </p></th>
+    </tr>
+  <tr>
+    <th>
+      <p>
+      Email:
+      <a href="#" id="email" data-type="textarea" data-pk="1" data-url="/settings/email" data-title=""><%= @user.email%></a>
+      </p></th>
+
+
+    <th>
+      <p>
+      About Me:
+      <a href="#" id="about_me" data-type="textarea" data-pk="1" data-url="/settings/about" data-title="about me"><%= @user.about_me%></a>
+      </p></th>
+    </tr>
+
+
+</table>
+
+<script>
+  $.fn.editable.defaults.mode = 'inline';
+
+  $(document).ready(function() {
+    $('#about_me').editable();
+    $('#email').editable();
+  });
+</script>

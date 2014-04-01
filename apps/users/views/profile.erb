@@ -1,0 +1,129 @@
+<br>
+<table class="gradienttable">
+  <tr>
+    <th>
+      <p> <!--Username: --> <%= @user.username %>
+      </p>
+      <p>Avatar Pic 
+      </p>
+    </th>
+    <th>
+      <p>About: <%= @user.about_me%>
+      </p>
+    </th>
+  </tr>
+</table>
+<!--
+<tr>
+  <p>Studing: <%= @studies.count %>
+  </p>
+  <p>Studied: <%= @studies.count %>
+  </p>
+</tr>
+-->
+<br>
+<table class="gradienttable">
+  <tr>
+    <th><p>Game(Total: <%=@studies.count %>)</p></th><th><p> Remaining Time</p></th><th><p> Viewed</p></th><th><p> Completed</p></th>
+
+  </tr>
+  <br>
+
+  <% if @personal %>
+    <% @personal_studies.each do |g| %>
+      <tr style="cursor: pointer; color:green;" onclick="location.href='/studies/<%= g.title %>';">
+	<td>
+	  <%= g.title %>
+	</td>
+	<td>
+	  <p>
+	  <span > <%= g.time / 60 %> mins</span>
+	  <br>
+	  <img width='40px' src='../assets/images/clock.png'/>
+	  </p>
+	  <p>
+	  remaining for completion
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.viewed %>
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.completed%>
+	  </p>
+	</td>
+      </tr>
+    <% end %>
+  <% else %>
+    <% @green.each do |g| %>
+      <tr style="cursor: pointer; color:green;" onclick="location.href='/studies/<%= g.title %>';">
+	<td>
+	  <%= g.title %>
+	</td>
+	<td>
+	  <p>
+	  <span > <%= g.time / 60 %> mins</span>
+	  <br>
+	  <img width='40px' src='../assets/images/clock.png'/>
+	  </p>
+	  <p>
+	  remaining for completion
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.viewed %>
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.completed%>
+	  </p>
+	</td>
+      </tr>
+    <% end %>
+
+    <% @red.each do |g| %>
+      <tr style="cursor: pointer; color:red;" onclick="location.href='/games/<%= g.title %>';">
+	<td>
+	  <%= g.title %>
+	</td>
+	<td>
+	  <p>
+	  <span > <%= g.time / 60 %> mins</span>
+	  <br>
+	  <img width='40px' src='../assets/images/clock.png'/>
+	  </p>
+	  <p>
+	  remaining for completion
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.viewed %>
+	  </p>
+	</td>
+	<td>
+	  <p>
+	  <%= g.completed%>
+	  </p>
+	</td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br>
+<table class="gradienttable">
+  <tr>
+    <th>
+      <p>Shared a lot of tips: <%= @user.username %>
+      </p>
+    </th>
+  </tr>
+</table>
+
+

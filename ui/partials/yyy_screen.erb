@@ -1,0 +1,30 @@
+<div class="areawhite">
+  <div id="fullscreen" class ="" style="cursor: pointer;">Fullscreen 
+    <div id="fullscreen_status" class="areawhite" style="cursor: pointer !important; color: red;"> 
+   Off </div>
+  </div>
+</div>
+
+</br>
+
+<script>
+
+  var fs_status = false;
+  $('#fullscreen').click(function(){
+    $(document).toggleFullScreen();
+    if (fs_status) {
+      $('#fullscreen_status').html("<div class=''> Off </div>");
+      $('#fullscreen_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+      fs_status = false;
+      } else {
+
+//      $('#fullscreen_status').html("<a class=''> On </a>");
+      $('#fullscreen_status').html('<div style="color: green;">On </div>');
+      $('#fullscreen_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+      fs_status = true;
+    }
+  });
+
+
+
+</script>

@@ -1,0 +1,110 @@
+<br>
+<div class="areawhite">
+  <div id="tips" class ="" style="cursor: pointer;">Tips 
+    <div id="tip_status" class="areawhite" style="cursor: pointer !important; color: red;"> 
+   Off </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    tstatus = false;
+    $('#tips').click(function(){
+      //$("#foo").toggleClass("maximize");
+      //$(this).html($(this).html() == "Tips On" ? "Tips Off" : "Tips On");
+      if (tstatus) {
+
+	$('#tip_status').html('Off');
+	$('#tip_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+	tstatus = false;
+
+	} else {
+
+	$('#tip_status').html('<div style="color: green;">On </div>');
+	$('#tip_status').fadeTo('fast',0).fadeTo('fast',1).fadeTo('fast',0).fadeTo('fast',1);
+	tstatus = true;
+      }
+    });
+  });
+
+  //var tid = setInterval(self, 20000);
+  //tid;
+  //function abortTimer() { // to be called when you want to stop the timer
+    //  clearInterval(tid);
+    //}
+
+  var tips = [];
+  var tiptitle;
+  var tipdesc;
+  n = 0;
+  <% @gotips.each do |t| %>
+    console.log(n);
+    if (!tips[n]) tips[n] = []
+    tips[n][0] = "<%= t.title %>";
+    tips[n][1] = "<%= t.desc %>";
+    console.log(tips[n]);
+    n = tips.length;
+  <% end %>
+
+  var ttips = true;
+  var timerId; 
+  $('#tips').click(function(){
+
+
+    if (ttips) {
+      console.log(ttips);
+      console.log("will set it to false");
+      ttips = false;
+   
+       timerId = setInterval(function() {
+
+	// code you want to execute every second here
+	var zarand  = Math.floor(Math.random()*tips.length);
+	tiptitle = tips[zarand][0];
+	tipdesc = tips[zarand][1];
+	//console.log(tips[0][0]);
+
+
+	$.gritter.add({
+	  // (string | mandatory) the heading of the notification
+	  //title: 'Ajikeshi (aji erasure)',
+	  // (string | mandatory) the text inside the notification
+	  //text: '<input class="knob" data-min="-100" data-max="100" data-width="200" data-height="200" data-thickness=".3" data-cursor=true>', 
+	  title: tiptitle,
+	  //title: "<div style ='letter-spacing: 1px;'" + tiptitle + " </div>" ,
+	  text: tipdesc, 
+	  //text: "Zenshu in Japanese. The publication.",
+	  //text: "<h1><%= 2 + 2 %> A play which removes aji.</h1> vvddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd vddd ddd ddd ddd  : Book's title, 本因坊秀策全集, is pronounced k in Chinese and Honinbo Shusaku Zenshu in Japanese. The publication.",
+	  // text: "Ajikeshi (aji erasure):A play which removes aji. This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" style="color:#ccc">magnis dis parturient</a> montes, nascetur ridiculus mus.",
+	  // (string | optional) the image to display on the left
+	  //image: 'http://senseis.xmp.net/diagrams/8/2903f93a1d290069bc31fbab35c04ea1.png',
+	  image: 'http://www.clker.com/cliparts/d/J/h/B/t/p/sakura-blossom.svg',
+	  // (bool | optional) if you want it to fade out on its own or just sit there
+	  sticky: false,
+	  // (int | optional) the time you want it to be alive for before fading out
+	  time: '10000'
+	});
+	//return false;
+
+      
+
+      }, 40000);
+
+}
+else {
+  console.log(ttips);
+  console.log("will be clearing it and set it to true");
+  ttips = true;
+  clearInterval(timerId);
+}
+
+  });
+
+  $.extend($.gritter.options, { 
+    position: 'bottom-right', // defaults to 'top-right' but can be 'bottom-left', 'bottom-right', 'top-left', 'top-right' (added in 1.7.1)
+    fade_in_speed: 'medium', // how fast notifications fade in (string or int)
+    fade_out_speed: 20000, // how fast the notices fade out
+    time: 60000 // hang on the screen for...
+  });
+
+</script>

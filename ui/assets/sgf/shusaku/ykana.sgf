@@ -1,0 +1,354 @@
+(
+;
+GaMe[1]
+US[jansteen@cwi.nl (Jan and Kishiko van der Steen)]
+PW[yk]     WR[4d*]
+PB[kishiko]BR[4d*]
+DT[1995]
+PC[IGS]
+RE[Void]
+C[Comments based on an analysis by Kishiko and Jan.]
+;
+B[qf]
+;
+W[qp]
+;
+B[fc]
+;
+W[dp]
+;
+C[An interesting opening, trying to avoid the regular patterns,
+and asking the opponent about his real Go strength :-\).]
+B[cj]
+;
+L[pc]
+C[First mistake! Entering upper-right \("A"\) is better.]
+W[cd]
+;
+C[This aims at an immediate attack.]
+B[cf]
+;
+L[ed]
+C[Lyu played at "A" in this position \(check lyu-kishiko, round 2\).]
+W[dc]
+;
+C[Black is successful here, enclosing white after just 9 moves.]
+B[ee]
+;
+W[bf]
+;
+B[be]
+;
+W[ce]
+;
+B[bg]
+;
+W[df]
+;
+B[cg]
+;
+W[bd]
+;
+C[Bad style, see variation "good style".]
+B[de]
+(
+;
+C[This proves that d15 is bad style, cutting with e16 is bad
+shape now.]
+W[fd]
+;
+B[gc]
+;
+W[ed]
+;
+B[jc]
+;
+W[qc]
+;
+C[Attack of course!]
+B[oc]
+;
+W[pd]
+;
+C[Correct direction, since k17 is low better build up power
+along the other part of the board.]
+B[of]
+;
+W[od]
+;
+C[Probably better is variation: "building".]
+B[nc]
+(
+;
+W[nd]
+;
+B[md]
+;
+W[me]
+;
+B[ld]
+;
+W[nf]
+;
+B[og]
+;
+L[qi][ng]
+C[White r9 is a good move. Now black has to chose: A or B.
+"A" feels slightly submissive, "B" is the game.]
+W[qk]
+;
+B[ng]
+;
+W[mg]
+;
+B[mh]
+;
+W[lg]
+;
+B[lh]
+;
+C[Please note that white is not alive in the corner because
+of variation. That's why white has to walk here.]
+W[kg]
+(
+;
+L[qi]
+C[This is the fighting approach, attacking r9 instead of answering
+submissively at "A".]
+B[qm]
+;
+W[ok]
+;
+B[on]
+;
+W[op]
+;
+B[nl]
+;
+W[mj]
+;
+B[kh]
+;
+L[nh]
+C[Aiming the cut at "A".]
+W[pi]
+;
+B[ni]
+;
+W[ol]
+;
+B[om]
+;
+W[ml]
+;
+B[mm]
+;
+W[ll]
+;
+B[lm]
+;
+W[km]
+;
+B[mo]
+;
+W[mq]
+;
+C[Black wants sente desperately because there are important
+points in the center waiting...]
+B[lq]
+;
+W[lr]
+;
+B[lp]
+;
+W[kr]
+;
+C[This cut is important for obvious reasons.]
+B[kl]
+;
+W[kj]
+;
+B[jl]
+;
+C[White suddenly changes direction. Bad choice, better keep
+fighting for center power.]
+W[qh]
+;
+C[Sente, see variation.]
+B[jg]
+(
+;
+W[le]
+;
+L[oj]
+C[Aiming "A".]
+B[qo]
+;
+C[Extremely bad exchange, peeping at a cutting point is a "kyu" move.]
+W[ji]
+;
+B[jh]
+;
+W[rp]
+;
+C[Loosing move probably, too early.]
+B[oj]
+;
+W[nk]
+;
+C[The original idea of Kishiko was to play the variation.]
+B[jn]
+(
+;
+W[nm]
+;
+L[lk]
+M[oj][nk]
+C[Now you see the reason why p10 was bad, white can capture
+one stone, and the center aji "A" is gone for black. Now, white is
+better, if black would have played k6 without the marked exchange,
+black would be ok, or even better.]
+B[nn]
+;
+W[ql]
+;
+C[The largest point. The rest of the game could still have brought
+black victory, but Kishiko missed some chances unfortunately.]
+B[cn];W[bo];B[fq];W[eq];B[fp];W[bn];B[cm];W[bm];B[jq];W[cl];B[dl];W[ck];
+B[dk];W[bj];B[en];W[ci];B[dj];W[bi];B[eg];W[jr];B[iq];W[ij];B[er];W[dr];
+B[fr];W[cq];B[pb];W[qb];B[eb];W[db];B[rd];W[rc];B[ik];W[gj];B[hj];W[hi];
+B[hk];W[gi];B[af];W[fe];B[ff];W[he];B[id];W[gf];B[gg];W[hg];B[ih];W[ii];
+B[hh];W[gh];B[kf];W[lf];B[fg];W[hd];B[hc];W[dh];B[dg];W[ad];B[if];W[hf];
+B[gd];W[ge];B[ae];W[je];B[ie];W[jf];B[kd];W[ke];B[oe];W[ne];B[qg];W[oh];
+B[nh];W[rg];B[rf];W[rh];B[ig];W[fk];B[fl];W[gk];B[gl];W[ir];B[hr];W[po];
+B[ro];W[rm];B[rn];W[rl];B[pn];W[ah];B[bh];W[sp];B[np];W[nq];B[pj];W[qj];
+B[da];W[cb];B[ca];W[ba];B[ea];W[ec];B[fb];W[bb];B[oo];W[pp];B[do];W[co];
+B[ep];W[dq];B[kk];W[lk];B[kq];W[qd];B[re];W[pa];B[oa];W[qa];B[ds];W[cs];
+B[es];W[sn];B[mp];W[ek];B[el];W[hs];B[gs];W[is];B[li];W[lj];B[sg];W[sh];
+B[sf];W[sd];B[jd];W[pc];B[ob];W[oi];B[nj];W[so];B[qn];W[ai];B[ag];W[di];
+B[ei];W[pe];B[jk];W[nl];B[pg];W[ph];B[fi];W[bk];B[ef];W[dd];B[jj];W[ki];
+B[pk];W[pl];B[eh];W[fh];B[ej];W[sc];B[fj];W[se];B[ch];W[qe];B[pf];W[mi];
+B[pm];B[kn];W[mr];B[jm];
+)
+(
+;
+N[The idea]
+AE[jn]
+B[pj]
+;
+W[qj]
+;
+B[pk]
+;
+W[pl]
+;
+C[Now you see the meaning of r5. This variation is very good
+for black. But he will play differently.]
+B[ql]
+)
+(
+;
+N[The reality]
+AE[jn]
+B[pj]
+;
+C[White will sacrifice two stones.]
+W[ql]
+;
+B[qj]
+;
+W[rj]
+;
+B[ri]
+;
+W[sk]
+;
+B[rh]
+;
+C[and fight with the center groups. This is hard for black \(although
+possible maybe\).]
+W[jm]
+)
+)
+(
+;
+N[Severe]
+C[Now white has no move anymore. For example...]
+B[kf]
+;
+W[le]
+;
+B[lf]
+;
+W[mf]
+;
+B[ke]
+;
+W[ne]
+;
+C[White dies.]
+B[rd]
+)
+)
+(
+;
+N[Not alive yet]
+B[rd]
+;
+W[rc]
+;
+B[qd]
+;
+W[pc]
+;
+C[White has one eye maximum here.]
+B[pb]
+)
+)
+(
+;
+N[Building]
+AE[nc]
+C[Probably this is the only move to garantee the efficiency of all stones.]
+B[nd]
+;
+W[nc]
+;
+C[Please note this technique.]
+B[md]
+;
+C[Bad style, variation shows correct procedure.]
+W[mc]
+(
+;
+B[lc]
+;
+W[lb]
+;
+C[This shows why n16 is the proper procedure, right? White is
+captured.]
+B[ob]
+)
+(
+;
+N[Proper move]
+AE[mc]
+C[This is the correct move, since it doesn't strengthen black's outside.]
+W[nb]
+;
+C[Black built up a nice shape now.]
+B[pm]
+)
+)
+)
+(
+;
+N[Good style]
+C[This is better style]
+AE[de]
+M[fc]
+C[This move is good style since it has a better relation to
+the marked stone. besides, white can hardly move the d14 stone now.]
+B[ef]
+)
+)

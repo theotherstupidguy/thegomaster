@@ -1,0 +1,10 @@
+  <script>
+  $.fn.editable.defaults.mode = 'inline';
+
+  $(document).ready(function() {
+    $('#story').editable();
+  });
+</script>
+
+
+<a href="#" id="story" data-type="textarea" data-pk="1" data-url="<%= @game.title %>/story" data-title="enter game story"><%= @game.story %></a>

@@ -1,0 +1,33 @@
+=begin
+require 'rake/testtask'
+Rake::TestTask.new do |t|
+  t.libs.push << "apps/users/app.rb"
+  t.pattern = "spec/*_spec.rb"
+  #t.libs.push << "spec/*_spec.rb"
+  t.verbose = true
+end
+
+# seed Games  
+# crawel internet for sgf and iditidfy it and store it 
+#Rake::Task.new do |t|
+#
+#end
+
+## setup test environment
+# set :environment, :test
+# set :run, false
+# set :raise_errors, true
+# set :logging, false
+
+task :seed do
+    ruby "jobs/populate"
+end
+
+task :crawler do
+    ruby "jobs/noko"
+end
+
+task :www_comments_aggregation => :crawler do
+    ruby "jobs/sgf"
+end
+=end
