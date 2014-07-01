@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ===========
 TheGoMaster
 ===========
@@ -60,3 +61,7 @@ see http://nvie.com/posts/a-successful-git-branching-model/ for more on how this
 Wait for worldwide fame.
 Shrug and get on with you life when it doesn't arrive, but know you helped quite a few people in their life, even in a small way - 1000 raindrops will fill a bucket!
 
+=======
+thegomaster
+===========
+>>>>>>> 53653a7a72cd634b41abcd7acec4f61c012fa5bf

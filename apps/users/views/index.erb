@@ -1,1 +1,41 @@
-Hi 
+<!--
+  Games listed by the highest chatting participants.
+
+  Timeline of who did what "mezo studied x-game"
+Timeline of who did what "mezo added tip"
+Timeline of who did what "mezo added a game"
+
+Timeline document is like a log with a timestamp from each log line before every mongoid save! the timestamp in the view is (now - the db timestamp mins/days/weeks/months/years ago)
+-->
+<br>
+<table class="gradienttable">
+  <!--
+  <tr>
+    <th><p>Username</p></th><th><p> Email</p></th><th><p>... </p></th><th><p>...</p></th>
+  </tr>
+
+  -->
+  <% @timeline.each do |t| %>
+    <td>
+      using latex users can downloaded commented games pdf files generated on the fly
+      <%=  t.subject  %>
+    </td>
+
+    <td>
+      <p>
+      <%= t.predicate %>
+      </p>
+    </td>
+
+    <td>
+      <p>
+      <%= t.object %>
+      </p>
+    </td>
+
+  </tr>
+<% end %>
+  </table>
+  <br>
+
+

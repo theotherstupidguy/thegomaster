@@ -1,4 +1,5 @@
 require File.dirname(__FILE__) + "/models/gouser.rb"
+require File.dirname(__FILE__) + "/models/gotimeline.rb"
 
 #require 'rack/flash'
 require 'warden'
@@ -117,6 +118,12 @@ class Users < Sinatra::Base
     newuser.password=  params['user']['password']
     newuser.email =  params['user']['email']
     newuser.about_me =  params['user']['about']
+    t = GoTimeline.new
+    t.subject = params['user']['username']
+    t.predicate = " has signed up to " 
+    t.object = "go master" 
+    t.url = "/users/#{params['user']['username']}"
+    t.save!
     newuser.save!
 
     env['warden'].authenticate!
@@ -168,6 +175,7 @@ class Users < Sinatra::Base
 =end
 
   get '/' do 
+    @timeline= GoTimeline.all
     erb :index #, :layout => :"#{settings.gol}"
   end
   ################### User ####################
