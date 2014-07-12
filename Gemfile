@@ -1,10 +1,15 @@
 source 'http://rubygems.org'
-gem 'rack'
+
 gem 'sinatra'
+gem 'sinatra-base'
+gem 'sinatra-contrib'
 gem 'thin'
 gem 'shotgun'
 gem 'sprockets'
 #gem 'sinatra-asset-pipeline'
+
+gem 'rack-attack'
+gem 'geoip' 
 
 gem 'mongoid'
 gem 'bson_ext'
